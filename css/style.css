@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+     margin: 20px;
+}
+
+a {
+    border: black 2px solid;
+    margin: 5px;
+    padding: 5px;
+}
+
+input {
+    margin: 5px 20px;
+}

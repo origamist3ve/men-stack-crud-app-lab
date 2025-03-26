@@ -9,7 +9,10 @@ const carSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    image: String,
+    image:{
+        type: String,
+        required: true
+    }
 })
 
 const Car = mongoose.model('Car', carSchema)

@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fruit Show Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
 </head>
 <body>
-<h4>Here Is Your Car</h4>
-<h1><%= car.name %></h1>
+<h1>Here Is Your Car</h1>
+<h3><%= car.name %></h3>
 <p><%= car.description%></p>
+<img src="<%= car.image %>" />
 
 
 <!--The action in the form sends the location to the matching path that handles the delete-->

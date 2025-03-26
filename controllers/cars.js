@@ -33,9 +33,9 @@ carsRouter.get("/cars/:id/edit", async(req, res) => {
 
 //Takes in the name and descirption inside the new.ejs and posts then redirects to index
 carsRouter.post("/cars", async(req, res) => {
-    let {name, description} = req.body;
+    let {name, description, image} = req.body;
 
-    const car = await Car.create({name, description});
+    const car = await Car.create({name, description, image});
 
     res.redirect("/cars");
 })
@@ -55,6 +55,7 @@ carsRouter.put("/cars/:id/", async(req, res) => {
     const updateData = {
         name: req.body.name,
         description: req.body.description,
+        image: req.body.image,
     }
     await Car.findByIdAndUpdate(id, updateData, {
         returnDocument: "after"

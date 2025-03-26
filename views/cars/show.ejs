@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Show Page</title>
+</head>
+<body>
+<h4>Here Is Your Car</h4>
+<h1><%= car.name %></h1>
+<p><%= car.description%></p>
+
+
+<!--The action in the form sends the location to the matching path that handles the delete-->
+<form action="/cars/<%= car._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete <%= car.name %></button>
+</form>
+
+<a href="/cars/<%= car._id %>/edit">Edit car</a>
+<a href="/cars">Go back to cars</a>
+</body>
+</html>
